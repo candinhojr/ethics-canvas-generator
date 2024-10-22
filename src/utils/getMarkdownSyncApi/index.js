@@ -58,7 +58,7 @@ export default function getMarkdownSyncApi({
     },
     saveAs() {
       const blob = new Blob([modelToMarkdown(currentModel)], { type: 'text/plain;charset=utf-8' })
-      const fileName = `business model canvas - ${currentModel.header.value.substr(0, 20).replace(/[^a-zA-Z0-9]+/g, ' ')}.txt`
+      const fileName = `ethics canvas - ${currentModel.header.value.substr(0, 20).replace(/[^a-zA-Z0-9]+/g, ' ')}.txt`
       FileSaver.saveAs(blob, fileName)
     },
     reset() {
