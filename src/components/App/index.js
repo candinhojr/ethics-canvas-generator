@@ -27,7 +27,7 @@ const GlobalStyle = createGlobalStyle`
 const routes = [
   {
     url: '/canvas',
-    Component: React.lazy(() => import('components/BusinessModelCanvas')),
+    Component: React.lazy(() => import('components/EthicsCanvas')),
   },
   {
     Component: WelcomePage,
