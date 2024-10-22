@@ -39,12 +39,12 @@ describe('utils/getMarkdownSyncApi/splitMarkdown', () => {
           }, {
             content: '',
             header: 'Customer Segments',
-            key: 'customer-segments',
+            key: 'governance-accountability',
             placeholder: 'To build an effective business model, a company must identify which customers it tries to serve.',
           }, {
             content: '',
             header: 'Value Propositions',
-            key: 'value-propositions',
+            key: 'privacy-security',
             placeholder: 'The collection of products and services a business offers to meet the needs of its customers.',
           },
         ],

@@ -18,14 +18,14 @@ const GridContainer = styled.div`
   border-width: 0.5em;
   box-sizing: border-box;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: auto 0.5fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto 1fr 1fr 1fr 0.75fr;
   grid-template-areas:
-    "menu menu menu menu menu menu menu menu menu menu"
-    "purpose purpose purpose purpose purpose purpose purpose purpose purpose purpose"
-    "key-partners key-partners key-activities key-activities value-propositions value-propositions customer-relationships customer-relationships customer-segments customer-segments"
-    "key-partners key-partners key-resources key-resources value-propositions value-propositions channels channels customer-segments customer-segments"
-    "cost-structure cost-structure cost-structure cost-structure cost-structure revenue-streams revenue-streams revenue-streams revenue-streams revenue-streams";
+    "menu menu menu menu menu menu menu menu menu menu menu menu"
+    "purpose purpose purpose purpose purpose purpose purpose purpose purpose purpose purpose purpose"
+    "education-engagement education-engagement education-engagement privacy-security privacy-security privacy-security transparency-accountability transparency-accountability transparency-accountability governance-accountability governance-accountability governance-accountability"
+    "accessibility-inclusion accessibility-inclusion accessibility-inclusion privacy-security privacy-security privacy-security social-impact social-impact social-impact governance-accountability governance-accountability governance-accountability"
+    "comments-observations comments-observations comments-observations comments-observations comments-observations comments-observations comments-observations comments-observations comments-observations comments-observations comments-observations comments-observations";
   margin: auto;
 
   height: 100%;

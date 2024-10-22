@@ -32,7 +32,14 @@ const PropertyInput = styled.input`
   text-align: right;
   width: 20em;
 `
-
+const SectionTitleContainer = styled.div`
+  margin: 0.75em 0.75em 0 0.75em;
+  display: flex;
+`
+const SectionTitle = styled.h2`
+  margin: 0;
+  flex: 1;
+`
 const StyledCanvasArea = styled(CanvasArea)`
   flex: 1;
 `
@@ -81,6 +88,9 @@ function CanvasHeader({
           />
         </HeaderContainerRight>
       </HeaderContainer>
+      <SectionTitleContainer>
+        <SectionTitle>{sectionProps.header}</SectionTitle>
+      </SectionTitleContainer>
       <StyledCanvasArea
         isSimple={true}
         {...sectionProps}

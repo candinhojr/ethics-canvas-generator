@@ -6,10 +6,10 @@ import { model } from './demoData'
 describe('utils/getMarkdownSyncApi', () => {
   const sectionKeys = [
     'purpose',
-    'customer-segments',
-    'value-propositions',
+    'governance-accountability',
+    'privacy-security',
   ]
-  const someSectionKey = 'customer-segments'
+  const someSectionKey = 'governance-accountability'
   const someSection = model.sections[1]
 
   const propertyKeys = [

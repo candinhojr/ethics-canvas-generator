@@ -10,10 +10,10 @@ for:
 ### This is an initial text!
 With multiline!!!
 
-## Customer Segments {customer-segments}
+## Customer Segments {governance-accountability}
 [To build an effective business model, a company must identify which customers it tries to serve.]
 
-## Value Propositions {value-propositions}
+## Value Propositions {privacy-security}
 [The collection of products and services a business offers to meet the needs of its customers.]
 
 `
@@ -51,14 +51,14 @@ export const model = {
       something: 'should be preserved',
     },
     {
-      key: 'customer-segments',
+      key: 'governance-accountability',
       content: '',
       header: 'Customer Segments',
       placeholder: 'To build an effective business model, a company must identify which customers it tries to serve.',
       something: 'should also be preserved',
     },
     {
-      key: 'value-propositions',
+      key: 'privacy-security',
       content: '',
       header: 'Value Propositions',
       placeholder: 'The collection of products and services a business offers to meet the needs of its customers.',
