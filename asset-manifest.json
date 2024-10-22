@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/ethics-canvas/static/css/main.36416e79.chunk.css",
+    "main.js": "/ethics-canvas/static/js/main.769aabba.chunk.js",
+    "main.js.map": "/ethics-canvas/static/js/main.769aabba.chunk.js.map",
+    "runtime~main.js": "/ethics-canvas/static/js/runtime~main.eda5c519.js",
+    "runtime~main.js.map": "/ethics-canvas/static/js/runtime~main.eda5c519.js.map",
+    "static/css/2.a17ebd6e.chunk.css": "/ethics-canvas/static/css/2.a17ebd6e.chunk.css",
+    "static/js/2.ad9e7461.chunk.js": "/ethics-canvas/static/js/2.ad9e7461.chunk.js",
+    "static/js/2.ad9e7461.chunk.js.map": "/ethics-canvas/static/js/2.ad9e7461.chunk.js.map",
+    "static/css/3.764ccc25.chunk.css": "/ethics-canvas/static/css/3.764ccc25.chunk.css",
+    "static/js/3.570a29e5.chunk.js": "/ethics-canvas/static/js/3.570a29e5.chunk.js",
+    "static/js/3.570a29e5.chunk.js.map": "/ethics-canvas/static/js/3.570a29e5.chunk.js.map",
+    "static/js/4.48733ba7.chunk.js": "/ethics-canvas/static/js/4.48733ba7.chunk.js",
+    "static/js/4.48733ba7.chunk.js.map": "/ethics-canvas/static/js/4.48733ba7.chunk.js.map",
+    "index.html": "/ethics-canvas/index.html",
+    "precache-manifest.f3ed7e344514f71270e7f3c5c233dc00.js": "/ethics-canvas/precache-manifest.f3ed7e344514f71270e7f3c5c233dc00.js",
+    "service-worker.js": "/ethics-canvas/service-worker.js",
+    "static/css/2.a17ebd6e.chunk.css.map": "/ethics-canvas/static/css/2.a17ebd6e.chunk.css.map",
+    "static/css/3.764ccc25.chunk.css.map": "/ethics-canvas/static/css/3.764ccc25.chunk.css.map",
+    "static/css/main.36416e79.chunk.css.map": "/ethics-canvas/static/css/main.36416e79.chunk.css.map",
+    "static/media/formatBold.8680cb7c.svg": "/ethics-canvas/static/media/formatBold.8680cb7c.svg",
+    "static/media/formatItalic.33a74485.svg": "/ethics-canvas/static/media/formatItalic.33a74485.svg",
+    "static/media/formatListBulleted.421c3226.svg": "/ethics-canvas/static/media/formatListBulleted.421c3226.svg",
+    "static/media/formatListNumbered.84ff2b73.svg": "/ethics-canvas/static/media/formatListNumbered.84ff2b73.svg",
+    "static/media/formatSize.e53198a5.svg": "/ethics-canvas/static/media/formatSize.e53198a5.svg",
+    "static/media/formatStrikethrough.ea62c122.svg": "/ethics-canvas/static/media/formatStrikethrough.ea62c122.svg",
+    "static/media/formatUnderlined.4725a735.svg": "/ethics-canvas/static/media/formatUnderlined.4725a735.svg",
+    "static/media/note.e8e466e6.svg": "/ethics-canvas/static/media/note.e8e466e6.svg"
+  }
+}
