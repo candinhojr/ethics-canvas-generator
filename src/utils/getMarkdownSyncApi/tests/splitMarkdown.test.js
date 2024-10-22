@@ -15,7 +15,7 @@ describe('utils/getMarkdownSyncApi/splitMarkdown', () => {
         props: [
           {
             key: 'date',
-            value: '2012-12-12',
+            value: '2024-10-22',
           },
           {
             key: 'version',
@@ -32,18 +32,18 @@ describe('utils/getMarkdownSyncApi/splitMarkdown', () => {
 
         sections: [
           {
-            content: '### This is an initial text!\nWith multiline!!!',
-            header: 'Purpose',
+            content: '### Este é um texto inicial!\nCom várias linhas!!!',
+            header: 'Propósito',
             key: 'purpose',
-            placeholder: 'Without a clear purpose, how will we know if a model is good or not?',
+            placeholder: 'Sem um propósito claro, como saberemos se um modelo é bom ou não?',
           }, {
             content: '',
-            header: 'Customer Segments',
+            header: 'Governança e Responsabilidade',
             key: 'governance-accountability',
             placeholder: 'To build an effective business model, a company must identify which customers it tries to serve.',
           }, {
             content: '',
-            header: 'Value Propositions',
+            header: 'Privacidade e Segurança',
             key: 'privacy-security',
             placeholder: 'The collection of products and services a business offers to meet the needs of its customers.',
           },

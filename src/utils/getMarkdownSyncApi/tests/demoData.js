@@ -1,19 +1,19 @@
 
 export const markdown = `# Your Business
-date: 2012-12-12
+date: 2024-10-22
 version: 0.3
 by: My beloved ones
 for:
 
-## Purpose {purpose}
-[Without a clear purpose, how will we know if a model is good or not?]
-### This is an initial text!
-With multiline!!!
+## Propósito {purpose}
+[Sem um propósito claro, como saberemos se um modelo é bom ou não?]
+### Este é um texto inicial!
+Com várias linhas!!!
 
-## Customer Segments {governance-accountability}
+## Governança e Responsabilidade {governance-accountability}
 [To build an effective business model, a company must identify which customers it tries to serve.]
 
-## Value Propositions {privacy-security}
+## Privacidade e Segurança {privacy-security}
 [The collection of products and services a business offers to meet the needs of its customers.]
 
 `
@@ -26,7 +26,7 @@ export const model = {
   props: [
     {
       key: 'date',
-      value: '2012-12-12',
+      value: '2024-10-22',
       placeholder: 'Date',
     },
     {
@@ -45,22 +45,22 @@ export const model = {
   sections: [
     {
       key: 'purpose',
-      content: '### This is an initial text!\nWith multiline!!!',
-      header: 'Purpose',
-      placeholder: 'Without a clear purpose, how will we know if a model is good or not?',
+      content: '### Este é um texto inicial!\nCom várias linhas!!!',
+      header: 'Propósito',
+      placeholder: 'Sem um propósito claro, como saberemos se um modelo é bom ou não?',
       something: 'should be preserved',
     },
     {
       key: 'governance-accountability',
       content: '',
-      header: 'Customer Segments',
+      header: 'Governança e Responsabilidade',
       placeholder: 'To build an effective business model, a company must identify which customers it tries to serve.',
       something: 'should also be preserved',
     },
     {
       key: 'privacy-security',
       content: '',
-      header: 'Value Propositions',
+      header: 'Privacidade e Segurança',
       placeholder: 'The collection of products and services a business offers to meet the needs of its customers.',
       something: 'should be preserved',
     },
