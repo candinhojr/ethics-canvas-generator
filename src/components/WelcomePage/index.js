@@ -42,26 +42,28 @@ function WelcomePage({
     <InfoPage
       {...otherProps}
     >
-      <h3>Business Model Canvas</h3>
-      <h1>Welcome!</h1>
-      <p>On the next page you will have the possibility to fill out a canvas. Nothing of your data will be stored at or even sent to a server. This is great as nobody can misuse your data, but you have to take care on your own to store and reload it.</p>
+      <h3>Canvas Ético</h3>
+      <h1>Bem vindo!</h1>
+      <p>Na próxima página, você terá a possibilidade de preencher seu canvas ético. Nenhum dado seu será armazenado ou mesmo enviado a um servidor. Isso é ótimo, pois ninguém pode usar indevidamente seus dados, mas você precisa se preocupar em armazená-los e recarregá-los por conta própria.</p>
       <ul>
         <Li>
-          Your input is stored in the browsers <strong>local storage</strong>. This means it will persist if you reload the page or even close the browser and open it again. But it will not be available in another browser or another computer.
+          Seu canvas será armazenado no <strong>armazenamento local (local storage)</strong> do navegador. sso significa que ele persistirá se você recarregar a página ou até mesmo fechar o navegador e abri-lo novamente. No entanto, ele não estará disponível em outro navegador ou computador.
         </Li>
         <Li>
-          You have the possibility to <strong>download your work as a simple, human readable text file</strong> (extended <A href="https://de.wikipedia.org/wiki/Markdown">markdown</A> syntax). Watch out for the &#34;Save to file&#34; button top right.
+          Você tem a possibilidade de <strong>baixar seu trabalho como um arquivo de texto simples e legível</strong> (utilizando sintaxe <A href="https://de.wikipedia.org/wiki/Markdown">markdown</A>). Fique atento ao botão &#34;Save to file&#34; no canto superior direito.
         </Li>
         <Li>
-          Your can edit the text file locally (if you want to) and <strong>load it again</strong>. Watch out for the &#34;Import from file&#34; button top right.
+          Você pode editar o arquivo de texto localmente (se desejar) e <strong>carregá-lo novamente</strong>. Fique atento ao botão &#34;Import from file&#34; no canto superior direito.
         </Li>
         <Li>
-          This page is <strong>offline enabled</strong>. This means if you loaded the page once it will persist if you loose yor internet connection. You can even navigate to the url again and it will load without connection.
+          Esta página está habilitada para uso <strong>offline</strong>. Isso significa que, se você carregá-la uma vez, ela persistirá caso perca sua conexão com a internet. Você pode até navegar novamente para a URL e ela será carregada sem conexão.
         </Li>
       </ul>
-      <p>I hope this canvas is useful for you &amp; I would appreciate your feedback via <A href="https://twitter.com/tobzuc">twitter</A> or <A href="https://www.linkedin.com/in/tobias-zucali-3555b388/">linkedin</A>!</p>
-      <Signature>Tobias</Signature>
-      <Button onClick={() => push('/canvas')}>{(localStorage.getItem('isInited')) ? 'Load canvas' : 'Create new canvas'}</Button>
+      <p>Espero que este canvas seja útil para você! Agradeço seu feedback através do <A href="https://www.linkedin.com/in/candinhojr/">linkedin</A>!</p>
+      <p>O canvas aqui utilizado é o resultado do meu Trabalho de Conclusão de Curso do curso de Sistemas de Informação da Universidade Federal de Santa Catatina (<A href="https://ufsc.br/">UFSC</A>) ❤️.</p>
+      <p>O projeto web foi baseado no trabalho de <A href="https://www.linkedin.com/in/tobias-zucali-3555b388/">Tobias Zucali</A>, que desenvolveu a ferramenta para o preenchimento do <A href="https://tobias-zucali.github.io/business-model-canvas-generator">Business Model Canvas</A>.</p>
+      <Signature>Candinho Jr.</Signature>
+      <Button onClick={() => push('/canvas')}>{(localStorage.getItem('isInited')) ? 'Criar novo canvas' : 'Carregar canvas'}</Button>
     </InfoPage>
   )
 }
