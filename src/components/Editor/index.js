@@ -32,7 +32,6 @@ const GlobalDraftJsEditorStyle = createGlobalStyle`
 export function Editor({
   cardStyles,
   editorState,
-  isSimple,
   onChange,
   placeholder,
   ...otherProps
@@ -89,14 +88,12 @@ export function Editor({
         placeholder={placeholder}
         ref={editorRef}
       />
-      {!isSimple && (
-        <Controls
-          cardControlTypes={cardStyles && cardStyles.map(getCardType)}
-          editorState={editorState}
-          isVisible={isFocusWithin}
-          onChange={handleChange}
-        />
-      )}
+      <Controls
+        cardControlTypes={cardStyles && cardStyles.map(getCardType)}
+        editorState={editorState}
+        isVisible={isFocusWithin}
+        onChange={handleChange}
+      />
     </EditorContainer>
   )
 }
@@ -108,7 +105,6 @@ Editor.propTypes = {
     label: PropTypes.string.isRequired,
   })),
   editorState: PropTypes.object.isRequired,
-  isSimple: PropTypes.bool,
   onChange: PropTypes.func.isRequired,
   placeholder: PropTypes.string,
 }

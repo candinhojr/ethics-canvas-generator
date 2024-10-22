@@ -90,6 +90,7 @@ function BusinessModelCanvas() {
     )
   }
 
+
   return (
     <React.Fragment>
       <GridContainer>
@@ -101,7 +102,6 @@ function BusinessModelCanvas() {
         {(markdownSyncApi.sections.map(({ isHeader, key, ...section }) => {
           const sectionProps = {
             editorState: editorStates[key],
-            isSimple: isHeader,
             onChange: ({ content, editorState }) => {
               markdownSyncApi.updateSection(key, { content })
               setSectionEditorState(key, editorState)

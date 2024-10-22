@@ -1,7 +1,7 @@
 {
   "name": "ethics-canvas-generator",
-  "homepage": "https://tobias-zucali.github.io/business-model-canvas-generator",
-  "version": "0.1.0",
+  "homepage": "https://candinhojr.github.io/ethics-canvas",
+  "version": "0.1.1",
   "private": true,
   "dependencies": {
     "draft-js": "^0.10.5",
