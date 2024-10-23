@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
-import { getMarkdownFromEditorState } from 'utils/editor'
+import { createEditorStateFromMarkdown, getMarkdownFromEditorState } from 'utils/editor'
 
 import AreaBorder from 'components/AreaBorder'
 import Editor from 'components/Editor'
@@ -66,6 +66,7 @@ function CanvasArea({
   header,
   onChange,
   placeholder,
+  isPrintingTemplate,
   ...otherProps
 }) {
   const helpIconRef = useRef(null);
@@ -99,7 +100,7 @@ function CanvasArea({
     >
       <AreaHeader>
         {header}
-        {placeholder && (
+        {!isPrintingTemplate && placeholder && (
           <HelpIcon
             ref={helpIconRef}
             type="button"
@@ -112,14 +113,18 @@ function CanvasArea({
         )}
       </AreaHeader>
       <StyledEditor
-        editorState={editorState}
+        editorState={isPrintingTemplate ? 
+          createEditorStateFromMarkdown(placeholder) :
+          editorState}
         onChange={(nextEditorState) => {
           onChange({
             content: getMarkdownFromEditorState(nextEditorState),
             editorState: nextEditorState,
           })
         }}
+        readOnly={isPrintingTemplate}
         placeholder={placeholder}
+        isPrintingTemplate={isPrintingTemplate}
       />
       <AreaBorder {...border} />
     </AreaBox>

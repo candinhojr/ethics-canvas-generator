@@ -71,6 +71,7 @@ function Menu({
   loadFromFile,
   onReset,
   onSaveAs,
+  setIsPrintingTemplate,
   ...otherProps
 }) {
   const importFormRef = useRef()
@@ -84,6 +85,12 @@ function Menu({
   const handleHelp = useCallback(() => {
     push('/')
   }, [])
+  const handlePrintTemplate = useCallback(() => {
+    setIsPrintingTemplate(true)
+    setTimeout(() => {
+      window.print();
+    }, 50);
+  }, [setIsPrintingTemplate])
 
   const {
     isFullscreen,
@@ -108,12 +115,12 @@ function Menu({
       <MenuButton
         onClick={onSaveAs}
       >
-        Save to file
+        Exportar
       </MenuButton>
       <MenuButton
         onClick={() => importInputRef.current.click()}
       >
-        Import from file
+        Importar
         <HiddenForm
           ref={importFormRef}
         >
@@ -135,12 +142,17 @@ function Menu({
       <MenuButton
         onClick={handleReset}
       >
-        Create new canvas
+        Criar novo
       </MenuButton>
       <MenuButton
         onClick={window.print}
       >
-        Print
+        Imprimir
+      </MenuButton>
+      <MenuButton
+        onClick={handlePrintTemplate}
+      >
+        Imprimir Template
       </MenuButton>
       <MenuButton
         aria-label="Help"
@@ -156,6 +168,7 @@ Menu.propTypes = {
   onReset: PropTypes.func.isRequired,
   onSaveAs: PropTypes.func.isRequired,
   loadFromFile: PropTypes.func.isRequired,
+  setIsPrintingTemplate: PropTypes.func.isRequired,
 }
 
 export default Menu

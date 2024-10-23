@@ -9,6 +9,7 @@ import CanvasHeader from 'components/CanvasHeader'
 import CanvasArea from 'components/CanvasArea'
 
 import model from './model'
+import { usePrintTemplate } from 'hooks/usePrintTemplate'
 
 
 const GridContainer = styled.div`
@@ -57,8 +58,9 @@ const getInitialEditorStates = (sections) => sections.reduce(
 )
 
 
-function BusinessModelCanvas() {
+function EthicsCanvas() {
   const markdownSyncApi = useMarkdownSync({ model })
+  const [isPrintingTemplate, setIsPrintingTemplate] = usePrintTemplate();
 
   const [editorStates, setEditorStates] = useState(
     () => getInitialEditorStates(markdownSyncApi.sections)
@@ -98,13 +100,17 @@ function BusinessModelCanvas() {
           loadFromFile={handleLoadFromFile}
           onReset={handleReset}
           onSaveAs={markdownSyncApi.saveAs}
+          setIsPrintingTemplate={setIsPrintingTemplate}
         />
         {(markdownSyncApi.sections.map(({ isHeader, key, ...section }) => {
           const sectionProps = {
             editorState: editorStates[key],
+            isPrintingTemplate,
             onChange: ({ content, editorState }) => {
-              markdownSyncApi.updateSection(key, { content })
-              setSectionEditorState(key, editorState)
+              if (!isPrintingTemplate) {
+                markdownSyncApi.updateSection(key, { content })
+                setSectionEditorState(key, editorState)
+              }
             },
             ...section,
           }
@@ -118,21 +124,23 @@ function BusinessModelCanvas() {
                 onPropertyChange={markdownSyncApi.updateProperty}
                 getProperty={markdownSyncApi.getProperty}
                 sectionProps={sectionProps}
-              />
-            )
-          } else {
-            return (
-              <StyledCanvasArea
-                gridArea={key}
-                key={key}
-                {...sectionProps}
-              />
-            )
+                />
+              )
+            } else {
+              return (
+                <StyledCanvasArea
+                  gridArea={key}
+                  key={key}
+                  isPrintingTemplate={isPrintingTemplate}
+                  {...sectionProps}
+                />
+              )
+            }
           }
-        }))}
+        ))}
       </GridContainer>
     </React.Fragment>
   )
 }
 
-export default BusinessModelCanvas
+export default EthicsCanvas
